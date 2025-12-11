@@ -7,7 +7,7 @@ import { MatToolbar } from '@angular/material/toolbar';
   template: `
     <mat-toolbar>
       <div class="toolbar-item">
-        <span>RealEstateCare</span>
+        <img src="/logo.png" height="78px">
       </div>
       <div class="toolbar-item">
         <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
@@ -21,6 +21,10 @@ import { MatToolbar } from '@angular/material/toolbar';
     mat-toolbar {
       display: flex;
       justify-content: space-between;
+      border-bottom: 2px solid #1F2F36;
+      height: 80px;
+      padding-left: 0;
+      background-color: #fff;
     }
     .toolbar-item {
       display: flex;
