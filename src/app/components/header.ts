@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatToolbar } from '@angular/material/toolbar';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'header',
@@ -10,13 +11,19 @@ import { MatToolbar } from '@angular/material/toolbar';
         <img src="/logo.png" height="78px">
       </div>
       <div class="toolbar-item">
-        <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
-          <mat-icon fontIcon="menu"></mat-icon>
-        </button>
+        <a routerLink="/">
+          <mat-icon>home</mat-icon>
+        </a>
+        <a routerLink="/settings">
+          <mat-icon>settings</mat-icon>
+        </a>
+        <a routerLink="/documentation">
+          <mat-icon>help</mat-icon>
+        </a>
       </div>
     </mat-toolbar>
   `,
-  imports: [ MatToolbar, MatIcon ],
+  imports: [MatToolbar, MatIcon, RouterLink],
   styles: `
     mat-toolbar {
       display: flex;
@@ -28,8 +35,11 @@ import { MatToolbar } from '@angular/material/toolbar';
     }
     .toolbar-item {
       display: flex;
-      gap: 5px;
+      gap: 10px;
       align-items: center;
+    }
+    a {
+      color: black;
     }
   `,
 })
