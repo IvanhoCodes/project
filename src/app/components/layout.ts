@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
-import { Header } from '../components/header';
-import { TabGroup } from '../components/tab-group';
+import { Header } from './header';
+import { Footer } from './footer';
 
 @Component({
   selector: 'layout',
   template: `
     <header></header>
+    <div>
+      <ng-content />
+    </div>
     <footer></footer>
   `,
-  imports: [ Header, TabGroup ],
+  imports: [ Header, Footer ],
   styles: `
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
+    footer {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
     }
-    tab-group {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+    div {
+      padding: 20px 10px;
     }
 `,
 })
