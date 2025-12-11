@@ -6,7 +6,7 @@ import { TabGroup } from '../components/tab-group';
   selector: 'layout',
   template: `
     <header></header>
-    <tab-group></tab-group>
+    <footer></footer>
   `,
   imports: [ Header, TabGroup ],
   styles: `
