@@ -2,9 +2,55 @@
   "reports": [
     {
       "name": "7931TG 8",
-      "type": "damage",
+      "type": "damage_assessment",
       "values": {
-        "location": "",
+        "location": "Beukenlaan 8 7931TG Fluitenberg",
+        "new_damage": true,
+        "damage_type": "wear",
+        "date": "2025-12-21T11:39+01:00",
+        "quick_response": true,
+        "description": ""
+      }
+    },
+    {
+      "name": "6813AZ 1-25",
+      "type": "overdue_maintenance",
+      "values": {
+        "location": "Het Oosterveld 1-25 6813AZ Arnhem",
+        "maintenance_type": "electrics",
+        "quick_response": true,
+        "costs": "0-500"
+      }
+    },
+    {
+      "name": "7921PC 13a",
+      "type": "installation_inspection",
+      "values": {
+        "location": "Hoogeveenseweg 13a 7921PC Zuidwolde",
+        "installation_type": "electrics",
+        "reported_fault": "Verwarming kapot",
+        "test_procedure": "link",
+        "approved": true,
+        "description": ""
+      }
+    },
+    {
+      "name": "7908XJ 6",
+      "type": "modifications",
+      "values": {
+        "documented_modifications": "link",
+        "location": "Damhert 10 7908XJ Hoogeveen",
+        "carried_out_by": "owner",
+        "description_modification": "Plafondlamp zelf geïnstalleerd",
+        "action": "inspection",
+        "description": ""
+      }
+    },
+    {
+      "name": "7931TG 8",
+      "type": "damage_assessment",
+      "values": {
+        "location": "Beukenlaan 8 7931TG Fluitenberg",
         "new_damage": true,
         "damage_type": "wear",
         "date": "2025-12-21T11:39+01:00",
