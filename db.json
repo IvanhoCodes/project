@@ -1,14 +1,16 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "reports": [
+    {
+      "name": "7931TG 8",
+      "type": "damage",
+      "values": {
+        "location": "",
+        "new_damage": true,
+        "damage_type": "wear",
+        "date": "2025-12-21T11:39+01:00",
+        "quick_response": true,
+        "description": ""
+      }
+    }
+  ]
 }
