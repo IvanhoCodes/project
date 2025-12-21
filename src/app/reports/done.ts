@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Layout } from '../components/layout';
+import { ReportsService } from './reports.service';
+import { Report } from './reports.model';
 
 @Component({
   selector: 'page',
@@ -18,4 +20,13 @@ import { Layout } from '../components/layout';
     }
   `,
 })
-export class Done {}
+export class Done {
+  constructor(private reportsService: ReportsService) {}
+
+  public reports: Report[] = [];
+  ngOnInit() {
+    this.reportsService.getReports().subscribe(data => {
+      this.reports = data;
+    });
+  }
+}
