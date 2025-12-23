@@ -2,19 +2,22 @@ import { Component, effect } from '@angular/core';
 import { Layout } from '../components/layout';
 import { ReportsService } from '../services/reports.service';
 import { Report } from '../models/reports.model';
+import { ReportsList } from "../components/reportsList";
 
 @Component({
   selector: 'page',
   template: `
     <layout>
-      Uitgevoerde rapportages
+      <h2>Uitgevoerde rapportages</h2>
+      @defer {
+        <reports-list [reports]="reports" />
+      } @loading (minimum 1s) {
+        Rapportages laden...
+      }
     </layout>
   `,
-  imports: [ Layout ],
+  imports: [Layout, ReportsList],
   styles: `
-    .example-spacer {
-      flex: 1 1 auto;
-    }
     layout {
       background-color: #f5f5f5;
     }
