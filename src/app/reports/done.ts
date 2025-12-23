@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { Layout } from '../components/layout';
-import { ReportsService } from './reports.service';
-import { Report } from './reports.model';
+import { ReportsService } from '../services/reports.service';
+import { Report } from '../models/reports.model';
 
 @Component({
   selector: 'page',
@@ -21,12 +21,15 @@ import { Report } from './reports.model';
   `,
 })
 export class Done {
-  constructor(private reportsService: ReportsService) {}
+  constructor(private reportsService: ReportsService) {
+    effect(() => {
+      this.getReports();
+    });
+  }
 
   public reports: Report[] = [];
-  ngOnInit() {
-    this.reportsService.getReports().subscribe(data => {
-      this.reports = data;
-    });
+
+  async getReports(): Promise<void> {
+    this.reports = await this.reportsService.getReports();
   }
 }

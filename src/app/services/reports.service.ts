@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ReportsService {
 
   constructor(private http: HttpClient) {}
 
-  getReports(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  async getReports(): Promise<any> {
+    return await firstValueFrom(this.http.get(this.apiUrl));
   }
 }
