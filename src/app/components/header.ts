@@ -14,12 +14,6 @@ import { RouterLink } from "@angular/router";
         <a routerLink="/">
           <mat-icon>home</mat-icon>
         </a>
-        <a routerLink="/settings">
-          <mat-icon>settings</mat-icon>
-        </a>
-        <a routerLink="/documentation">
-          <mat-icon>help</mat-icon>
-        </a>
       </div>
     </mat-toolbar>
   `,
