@@ -9,7 +9,7 @@
         "location": "Beukenlaan 8 7931TG Fluitenberg",
         "new_damage": true,
         "damage_type": "wear",
-        "quick_response": true,
+        "urgent": true,
         "description": ""
       }
     },
@@ -20,7 +20,7 @@
       "values": {
         "location": "Het Oosterveld 1-25 6813AZ Arnhem",
         "maintenance_type": "electrics",
-        "quick_response": true,
+        "urgent": true,
         "costs": "0-500"
       }
     },
@@ -58,7 +58,7 @@
         "location": "Beukenlaan 8 7931TG Fluitenberg",
         "new_damage": true,
         "damage_type": "wear",
-        "quick_response": true,
+        "urgent": true,
         "description": ""
       }
     }
