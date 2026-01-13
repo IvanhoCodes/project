@@ -2,7 +2,7 @@
   "reports": [
     {
       "name": "7931TG 8",
-      "date": "2025-12-21T11:39+01:00",
+      "date": "2025-12-21T12:39",
       "type": "damage_assessment",
       "assigned_to": "Jan Jansen",
       "values": {
@@ -15,7 +15,7 @@
     },
     {
       "name": "6813AZ 1-25",
-      "date": "2025-06-12T08:39+01:00",
+      "date": "2025-06-12T09:39",
       "type": "overdue_maintenance",
       "values": {
         "location": "Het Oosterveld 1-25 6813AZ Arnhem",
@@ -26,7 +26,7 @@
     },
     {
       "name": "7921PC 13a",
-      "date": "2024-12-10T11:09+01:00",
+      "date": "2024-12-10T12:09",
       "type": "installation_inspection",
       "values": {
         "location": "Hoogeveenseweg 13a 7921PC Zuidwolde",
@@ -39,7 +39,7 @@
     },
     {
       "name": "7908XJ 6",
-      "date": "2025-01-02T15:39+01:00",
+      "date": "2025-01-02T16:39",
       "type": "modifications",
       "values": {
         "documented_modifications": "link",
@@ -52,7 +52,7 @@
     },
     {
       "name": "7931TG 8",
-      "date": "2025-10-21T14:08+01:00",
+      "date": "2025-10-21T15:08",
       "type": "damage_assessment",
       "values": {
         "location": "Beukenlaan 8 7931TG Fluitenberg",
