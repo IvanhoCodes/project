@@ -7,10 +7,10 @@
       "assigned_to": "Jan Jansen",
       "values": {
         "location": "Beukenlaan 8 7931TG Fluitenberg",
-        "new_damage": true,
         "damage_type": "wear",
-        "urgent": true,
-        "description": ""
+        "description": "",
+        "new_damage": true,
+        "urgent": true
       }
     },
     {
@@ -20,8 +20,8 @@
       "values": {
         "location": "Het Oosterveld 1-25 6813AZ Arnhem",
         "maintenance_type": "electrics",
-        "urgent": true,
-        "costs": "0-500"
+        "costs": "0-500",
+        "urgent": true
       }
     },
     {
@@ -33,8 +33,8 @@
         "installation_type": "electrics",
         "reported_fault": "Verwarming kapot",
         "test_procedure": "link",
-        "approved": true,
-        "description": ""
+        "description": "",
+        "approved": true
       }
     },
     {
@@ -56,10 +56,10 @@
       "type": "damage_assessment",
       "values": {
         "location": "Beukenlaan 8 7931TG Fluitenberg",
-        "new_damage": true,
         "damage_type": "wear",
-        "urgent": true,
-        "description": ""
+        "description": "",
+        "new_damage": true,
+        "urgent": true
       }
     }
   ]
