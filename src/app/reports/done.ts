@@ -13,6 +13,8 @@ import { ReportsList } from "../components/reportsList";
         <reports-list [reports]="reports" />
       } @loading (minimum 1s) {
         Rapportages laden...
+      } @placeholder {
+        Rapportages laden...
       }
     </layout>
   `,
