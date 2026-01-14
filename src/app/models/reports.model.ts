@@ -3,14 +3,14 @@ interface DamageAssessment {
     new_damage: boolean;
     damage_type: string;
     date: Date;
-    quick_reponse: boolean;
+    urgent: boolean;
     description: string;
 }
 
 interface OverdueMaintenance {
     location: string;
     maintenace_type: string;
-    date: Date;
+    urgent: boolean;
     costs: string;
 }
 
