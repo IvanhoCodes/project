@@ -3,10 +3,10 @@
     {
       "name": "7931TG 8",
       "date": "2025-12-21T12:39",
+      "location": "Beukenlaan 8 7931TG Fluitenberg",
       "type": "damage_assessment",
       "assigned_to": "Jan Jansen",
       "values": {
-        "location": "Beukenlaan 8 7931TG Fluitenberg",
         "damage_type": "wear",
         "description": "",
         "new_damage": true,
@@ -16,9 +16,9 @@
     {
       "name": "6813AZ 1-25",
       "date": "2025-06-12T09:39",
+      "location": "Het Oosterveld 1-25 6813AZ Arnhem",
       "type": "overdue_maintenance",
       "values": {
-        "location": "Het Oosterveld 1-25 6813AZ Arnhem",
         "maintenance_type": "electrics",
         "costs": "0-500",
         "urgent": true
@@ -27,9 +27,9 @@
     {
       "name": "7921PC 13a",
       "date": "2024-12-10T12:09",
+      "location": "Hoogeveenseweg 13a 7921PC Zuidwolde",
       "type": "installation_inspection",
       "values": {
-        "location": "Hoogeveenseweg 13a 7921PC Zuidwolde",
         "installation_type": "electrics",
         "reported_fault": "Verwarming kapot",
         "test_procedure": "link",
@@ -40,10 +40,10 @@
     {
       "name": "7908XJ 6",
       "date": "2025-01-02T16:39",
+      "location": "Damhert 10 7908XJ Hoogeveen",
       "type": "modifications",
       "values": {
         "documented_modifications": "link",
-        "location": "Damhert 10 7908XJ Hoogeveen",
         "carried_out_by": "owner",
         "description_modification": "Plafondlamp zelf geïnstalleerd",
         "action": "inspection",
@@ -53,9 +53,9 @@
     {
       "name": "7931TG 8",
       "date": "2025-10-21T15:08",
+      "location": "Beukenlaan 8 7931TG Fluitenberg",
       "type": "damage_assessment",
       "values": {
-        "location": "Beukenlaan 8 7931TG Fluitenberg",
         "damage_type": "wear",
         "description": "",
         "new_damage": true,
