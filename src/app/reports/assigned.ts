@@ -5,7 +5,7 @@ import { Layout } from '../components/layout';
   selector: 'page',
   template: `
     <layout>
-      Toegewezen rapportages
+      <h2>Toegewezen rapportages</h2>
     </layout>
   `,
   imports: [ Layout ],

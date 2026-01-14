@@ -5,22 +5,33 @@ import { Footer } from './footer';
 @Component({
   selector: 'layout',
   template: `
-    <header></header>
-    <div>
-      <ng-content />
+    <div class="layout-container">
+      <header></header>
+      <div class="content">
+        <ng-content />
+      </div>
+      <footer></footer>
     </div>
-    <footer></footer>
   `,
-  imports: [ Header, Footer ],
+  imports: [Header, Footer],
   styles: `
-    footer {
-      bottom: 0;
-      position: absolute;
+    header {
+      top: 0;
+      position: fixed;
       width: 100%;
     }
-    div {
-      padding: 20px 10px;
+    footer {
+      bottom: 0;
+      position: fixed;
+      width: 100%;
+    }
+    .layout-container {
+      padding: 80px 0 67px;
+      margin-bottom: 60px;
+    }
+    .content {
+      padding: 0 20px 20px;
     }
 `,
 })
-export class Layout {}
+export class Layout { }

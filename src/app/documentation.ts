@@ -5,7 +5,7 @@ import { Layout } from './components/layout';
   selector: 'page',
   template: `
     <layout>
-      Documentatie
+      <h2>Documentatie</h2>
     </layout>
   `,
   imports: [ Layout ],

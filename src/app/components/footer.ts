@@ -26,10 +26,12 @@ import { MatIcon } from "@angular/material/icon";
             display: flex;
             column-gap: 10px;
             padding: 20px;
+            background-color: #fff;
         }
 
         hr {
             background: #1F2F36;
+            margin: 0;
         }
 
         .toolbar-item {
