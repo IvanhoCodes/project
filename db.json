@@ -1,6 +1,7 @@
 {
   "reports": [
     {
+      "id": 1,
       "name": "7931TG 8",
       "date": "2025-12-21T12:39",
       "location": "Beukenlaan 8 7931TG Fluitenberg",
@@ -14,6 +15,7 @@
       }
     },
     {
+      "id": 2,
       "name": "6813AZ 1-25",
       "date": "2025-06-12T09:39",
       "location": "Het Oosterveld 1-25 6813AZ Arnhem",
@@ -26,6 +28,7 @@
       }
     },
     {
+      "id": 3,
       "name": "7921PC 13a",
       "date": "2024-12-10T12:09",
       "location": "Hoogeveenseweg 13a 7921PC Zuidwolde",
@@ -39,6 +42,7 @@
       }
     },
     {
+      "id": 4,
       "name": "7908XJ 6",
       "date": "2025-01-02T16:39",
       "location": "Damhert 10 7908XJ Hoogeveen",
@@ -52,6 +56,7 @@
       }
     },
     {
+      "id": 5,
       "name": "7931TG 8",
       "date": "2025-10-21T15:08",
       "location": "Beukenlaan 8 7931TG Fluitenberg",

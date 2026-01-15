@@ -27,6 +27,7 @@ export interface Modifications {
 }
 
 export interface Report {
+    id: number;
     name: string;
     date: Date;
     location: string;
