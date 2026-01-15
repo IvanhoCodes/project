@@ -13,6 +13,11 @@ import { SelectedReport } from "../components/selectedReport";
           <selected-report [report]="report" />
         </mat-card-content>
       </mat-card>
+      <mat-card>
+        <mat-card-content>
+          <selected-report [report]="report" />
+        </mat-card-content>
+      </mat-card>
     </layout>
   `,
   imports: [Layout, MatCard, SelectedReport, MatCardContent],
