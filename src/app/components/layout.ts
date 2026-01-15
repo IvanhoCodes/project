@@ -19,6 +19,7 @@ import { Footer } from './footer';
       top: 0;
       position: fixed;
       width: 100%;
+      z-index: 1000;
     }
     footer {
       bottom: 0;
