@@ -26,9 +26,12 @@ export interface Modifications {
     action: string;
 }
 
-export interface Report {
+export interface ReportMain {
     id: number;
     name: string;
+}
+
+interface ReportData {
     date: Date;
     location: string;
     description: string;
@@ -36,3 +39,5 @@ export interface Report {
     assigned_to?: string;
     values: DamageAssessment | OverdueMaintenance | InstallationInspection | Modifications;
 }
+
+export interface Report extends ReportMain, ReportData {}

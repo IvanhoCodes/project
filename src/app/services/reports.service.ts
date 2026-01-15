@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
-import { ReportType, DamageAssessment, OverdueMaintenance, InstallationInspection, Modifications } from "../models/reports.model";
+import { firstValueFrom, map } from 'rxjs';
+import { ReportType, DamageAssessment, OverdueMaintenance, InstallationInspection, Modifications, Report } from "../models/reports.model";
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,24 @@ export class ReportsService {
 
   constructor(private http: HttpClient) {}
 
-  async getReports(): Promise<any> {
-    return await firstValueFrom(this.http.get(this.apiUrl));
+  async getReports(): Promise<{ id: number; name: string }[]> {
+    return await firstValueFrom(
+      this.http.get<any[]>(this.apiUrl).pipe(
+        map(reports =>
+          reports.map(report => ({
+            id: report.id,
+            name: report.name
+          }))
+        )
+      )
+    );
   }
 
-  getDefaultReportValuesByType(type: ReportType): DamageAssessment | OverdueMaintenance | InstallationInspection | Modifications | undefined {
+  async getReportById(id: number): Promise<Report> {
+    return await firstValueFrom(this.http.get<any>(`${this.apiUrl}/${id}`));
+  }
+
+  getDefaultReportValuesByType(type: ReportType): DamageAssessment | OverdueMaintenance | InstallationInspection | Modifications {
     let values;
     if (type === 'damage_assessment') {
       values = {
@@ -44,6 +57,8 @@ export class ReportsService {
         description_modification: '',
         action: '',
       };
+    } else {
+      throw new Error('Unknown report type');
     }
 
     return values;

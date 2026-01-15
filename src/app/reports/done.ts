@@ -1,7 +1,7 @@
 import { Component, effect } from '@angular/core';
 import { Layout } from '../components/layout';
 import { ReportsService } from '../services/reports.service';
-import { Report } from '../models/reports.model';
+import { ReportMain } from '../models/reports.model';
 import { ReportsList } from "../components/reportsList";
 
 @Component({
@@ -32,7 +32,7 @@ export class Done {
     });
   }
 
-  public reports: Report[] = [];
+  public reports: ReportMain[] = [];
 
   async getReports(): Promise<void> {
     this.reports = await this.reportsService.getReports();
