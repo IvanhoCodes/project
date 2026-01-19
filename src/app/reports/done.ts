@@ -8,13 +8,21 @@ import { ReportsList } from "../components/reportsList";
   selector: 'page',
   template: `
     <layout>
-      <h2>Uitgevoerde rapportages</h2>
+      <h1>Uitgevoerde rapportages</h1>
       @defer {
         <reports-list [reports]="reports" />
       } @loading (minimum 1s) {
-        Rapportages laden...
+        <div role="status" aria-live="polite" aria-atomic="true">
+          <p>Rapportages laden...</p>
+        </div>
       } @placeholder {
-        Rapportages laden...
+        <div role="status" aria-live="polite" aria-atomic="true">
+          <p>Rapportages laden...</p>
+        </div>
+      } @error {
+        <div role="alert" aria-live="assertive">
+          <p>Fout bij het laden van rapportages. Probeer het opnieuw.</p>
+        </div>
       }
     </layout>
   `,
@@ -35,6 +43,11 @@ export class Done {
   public reports: ReportMain[] = [];
 
   async getReports(): Promise<void> {
-    this.reports = await this.reportsService.getReports();
+    try {
+      this.reports = await this.reportsService.getReports();
+    } catch (error) {
+      console.error('Failed to load reports:', error);
+      // Error will be shown via @error block
+    }
   }
 }

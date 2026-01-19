@@ -5,14 +5,11 @@ import { Layout } from './components/layout';
   selector: 'page',
   template: `
     <layout>
-      <h2>Instellingen</h2>
+      <h1>Instellingen</h1>
     </layout>
   `,
   imports: [ Layout ],
   styles: `
-    .example-spacer {
-      flex: 1 1 auto;
-    }
     layout {
       background-color: #f5f5f5;
     }

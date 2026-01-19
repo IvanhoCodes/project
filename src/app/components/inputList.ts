@@ -7,25 +7,50 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 @Component({
     selector: "input-list",
     template: `
-        <div>
-            @for (input of inputs; track input.key) {
-                @if (input.type === "checkbox") {
-                    <mat-checkbox [checked]="input.value">{{ input.label }}</mat-checkbox>
-                } @else {
-                    <mat-form-field>
-                        <mat-label>{{ input.label }}</mat-label>
-                        <input matInput [value]="input.value" type="text" />
-                    </mat-form-field>
+        <fieldset>
+            <legend>Aanvullende gegevens</legend>
+            <div>
+                @for (input of inputs; track input.key) {
+                    @if (input.type === "checkbox") {
+                            <mat-checkbox 
+                                [checked]="input.value"
+                                [attr.aria-label]="input.label">
+                                {{ input.label }}
+                            </mat-checkbox>
+                    } @else {
+                        <mat-form-field>
+                            <mat-label>{{ input.label }}</mat-label>
+                            <input 
+                                matInput 
+                                [value]="input.value" 
+                                type="text"
+                                [attr.aria-label]="input.label" />
+                        </mat-form-field>
+                    }
                 }
-            }
-        </div>
+            </div>
+        </fieldset>
     `,
-    imports: [ MatListModule, MatLabel, MatFormFieldModule, MatInputModule, MatCheckboxModule ],
+    imports: [MatListModule, MatLabel, MatFormFieldModule, MatInputModule, MatCheckboxModule],
     styles: `
         div {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+        }
+
+        legend {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-wrapper {
+            margin-bottom: 1rem;
         }
     `,
 })

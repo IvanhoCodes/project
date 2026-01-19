@@ -10,45 +10,51 @@ import { ReportsService } from "../services/reports.service";
 @Component({
     selector: "selected-report",
     template: `
-        <mat-form-field>
-            <mat-label>Naam rapportage</mat-label>
-            <input matInput type="text" [value]="report().name" />
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Datum rapportage</mat-label>
-            <input matInput type="datetime-local" [value]="report().date" />
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Locatie rapportage</mat-label>
-            <input matInput type="text" [value]="report().location" />
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Opmerking</mat-label>
-            <textarea matInput [value]="report().description"></textarea>
-        </mat-form-field>
-        <mat-radio-group [value]="report().type" (change)="setSelectedType($event.value)">
-            <mat-radio-button value="damage_assessment">
-                Schade opnemen
-            </mat-radio-button>
-            <mat-radio-button value="overdue_maintenance">
-                Achterstallig onderhoud opnemen
-            </mat-radio-button>
-            <mat-radio-button value="installation_inspection">
-                Technische installaties inspecteren
-            </mat-radio-button>
-            <mat-radio-button value="modifications">
-                Modificaties inventariseren
-            </mat-radio-button>
-        </mat-radio-group>
-        <hr />
+        <fieldset>
+            <legend>Gegegevens</legend>
+            <mat-form-field>
+                <mat-label>Naam rapportage</mat-label>
+                <input matInput type="text" [value]="report().name" required aria-required="true" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Datum rapportage</mat-label>
+                <input matInput type="datetime-local" [value]="report().date" required aria-required="true" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Locatie rapportage</mat-label>
+                <input matInput type="text" [value]="report().location" required aria-required="true" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Opmerking</mat-label>
+                <textarea matInput [value]="report().description"></textarea>
+            </mat-form-field>
+
+            <mat-radio-group [value]="report().type" (change)="setSelectedType($event.value)" role="radiogroup" aria-labelledby="typeLabel" aria-required="true">
+                <mat-label>Type rapportage</mat-label>
+                <mat-radio-button value="damage_assessment">
+                    Schade opnemen
+                </mat-radio-button>
+                <mat-radio-button value="overdue_maintenance">
+                    Achterstallig onderhoud opnemen
+                </mat-radio-button>
+                <mat-radio-button value="installation_inspection">
+                    Technische installaties inspecteren
+                </mat-radio-button>
+                <mat-radio-button value="modifications">
+                    Modificaties inventariseren
+                </mat-radio-button>
+            </mat-radio-group>
+        </fieldset>
+
         <input-list [fields]="selectedValues()" />
-        <button matButton="filled">Opslaan</button>
+        <button matButton="filled" aria-label="Rapportage opslaan">Opslaan</button>
     `,
     imports: [MatRadioGroup, MatRadioButton, InputList, MatFormField, MatLabel, MatInputModule , MatButtonModule],
     styles: `
         mat-radio-group {
             display: flex;
             flex-direction: column;
+            margin-bottom: 1.25rem;
         }
 
         mat-form-field {
@@ -56,7 +62,18 @@ import { ReportsService } from "../services/reports.service";
         }
 
         button {
-            margin-top: 15px;
+            margin-top: 1.25rem;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-weight: bold;
+            margin-bottom: 1.25rem;
         }
     `,
 })
