@@ -10,9 +10,6 @@ import { Layout } from './components/layout';
   `,
   imports: [ Layout ],
   styles: `
-    .example-spacer {
-      flex: 1 1 auto;
-    }
     layout {
       background-color: #f5f5f5;
     }
