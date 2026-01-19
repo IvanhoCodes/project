@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Security
+
+There is currently no security implemented. This due to the fact that there is no real API connection.
+
+## Accessibilty
+
+This project is level A WCAG 2.1 compliant.
