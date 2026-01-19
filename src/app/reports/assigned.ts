@@ -1,8 +1,7 @@
-import { Component, effect } from '@angular/core';
+import { Component } from '@angular/core';
 import { Layout } from '../components/layout';
 import { MatCard, MatCardContent } from '@angular/material/card';
 import { SelectedReport } from "../components/selectedReport";
-import { ReportsService } from '../services/reports.service';
 import { Report } from '../models/reports.model';
 
 @Component({
