@@ -9,7 +9,7 @@ import { RouterLink } from "@angular/router";
     <nav aria-label="Primaire navigatie">
       <mat-toolbar>
         <div class="toolbar-item">
-          <img src="assets/logo.png" height="78px" alt="Rapportage systeem - Startpagina">
+          <img src="/assets/logo.png" height="78px" alt="Rapportage systeem - Startpagina">
         </div>
         <div class="toolbar-item">
           <a routerLink="/" aria-label="Ga naar startpagina" title="Startpagina">
